@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Weapon"))
         {
             anim.SetBool("GetHit", true);
-            hpHero = hpHero - 50f;
+            hpHero = hpHero - 10f;
         }
     }
     public void StopAttacking() 
