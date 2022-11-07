@@ -14,7 +14,7 @@ public class DragonLogic : MonoBehaviour
     public bool attack;
     public float hpDragon = 100f;
     public GameObject die;
-    public float destroyTime = 15;
+    public float destroyTime = 20;
 
     private void Start()
     {
@@ -86,7 +86,7 @@ public class DragonLogic : MonoBehaviour
         if (other.CompareTag("Sword"))
         {
             ani.SetBool("getHit", true);
-            hpDragon = hpDragon - 50f;
+            hpDragon = hpDragon - 5f;
         }
     }
     public void Final_Ani()

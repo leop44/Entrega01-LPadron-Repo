@@ -90,7 +90,7 @@ public class GruntLogic : MonoBehaviour
         if (other.CompareTag("Sword"))
         {
             ani.SetBool("getHit", true);
-            hpGrunt = hpGrunt - 20f;
+            hpGrunt = hpGrunt - 7f;
         }
     }
     public void Final_Ani()
