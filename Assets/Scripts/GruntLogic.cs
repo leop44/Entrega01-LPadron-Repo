@@ -22,6 +22,8 @@ public class GruntLogic : MonoBehaviour
     public bool coinDrop;
     public GameObject coinLight;
     public bool coinLightSpawn;
+    public GameObject detectSound;
+    public bool growlSound;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class GruntLogic : MonoBehaviour
         target = GameObject.Find("Player");
         coinDrop = true;
         coinLightSpawn = true;
+        growlSound = true;
     }
     private void Conduct()
     {
@@ -60,12 +63,16 @@ public class GruntLogic : MonoBehaviour
         }
         else
         {
+            if (growlSound == true)
+            {
+                Instantiate(detectSound);
+                growlSound = false;
+            }
             lookPos = target.transform.position - transform.position;
             lookPos.y = 0;
             rotation = Quaternion.LookRotation(lookPos);
             if (Vector3.Distance(transform.position, target.transform.position) > 1 && !attack)
             {
-
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
                 ani.SetBool("walk", false);
                 ani.SetBool("run", true);

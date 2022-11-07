@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float hpHero = 100f;
     public Vector3 startPos;
     public GameObject coinSound;
+    public GameObject attackSound;
 
 
     void Start()
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("Attacking");
             attacking = true;
+            Instantiate(attackSound);
         }
         anim.SetFloat("SpdX", hor);
         anim.SetFloat("SpdY", ver);
@@ -106,7 +108,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.transform.gameObject.tag == "Coin")
         {
-            Instantiate(coinSound, transform.position, transform.rotation);
+            Instantiate(coinSound);
             Destroy(other.transform.gameObject);
         }
     }

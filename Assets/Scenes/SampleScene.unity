@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 20792414}
   m_Layer: 0
   m_Name: Coin-Light (3)
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1207,6 +1207,7 @@ MonoBehaviour:
   hpHero: 100
   startPos: {x: 0, y: 0, z: 0}
   coinSound: {fileID: 3313229845105603560, guid: 500f59f8b5064154191b59bbc5696ac6, type: 3}
+  attackSound: {fileID: 1750150624713141583, guid: 126d360845530ab498b157fbcb20d2fe, type: 3}
 --- !u!95 &52711089
 Animator:
   serializedVersion: 4
@@ -4917,7 +4918,7 @@ GameObject:
   - component: {fileID: 253176865}
   m_Layer: 0
   m_Name: Coin-Light
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8333,7 +8334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409039730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.87, y: 68.13, z: 44.66}
+  m_LocalPosition: {x: -35.87, y: 67.67, z: 44.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8675,13 +8676,15 @@ MonoBehaviour:
   range: {fileID: 194579131}
   hpGrunt: 20
   die: {fileID: 420528001}
-  destroyTime: 4
+  destroyTime: 2
   lookPos: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
   coin: {fileID: 957093855439229371, guid: c0d64b74f06c4ed438f257c2f1788948, type: 3}
   coinDrop: 0
-  coinLight: {fileID: 5566195787321531076, guid: 843c6a16fbf5be44da6cc1ea85e83f7b, type: 3}
+  coinLight: {fileID: 4180656911756277810, guid: 843c6a16fbf5be44da6cc1ea85e83f7b, type: 3}
   coinLightSpawn: 0
+  detectSound: {fileID: 5015541416897019892, guid: 317619c9c19c14b41bb5f4d00d7df6a4, type: 3}
+  growlSound: 0
 --- !u!95 &420528005
 Animator:
   serializedVersion: 4
@@ -9010,13 +9013,15 @@ MonoBehaviour:
   range: {fileID: 1799069850}
   hpGrunt: 20
   die: {fileID: 439320666}
-  destroyTime: 4
+  destroyTime: 2
   lookPos: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
   coin: {fileID: 957093855439229371, guid: c0d64b74f06c4ed438f257c2f1788948, type: 3}
   coinDrop: 0
-  coinLight: {fileID: 5566195787321531076, guid: 843c6a16fbf5be44da6cc1ea85e83f7b, type: 3}
+  coinLight: {fileID: 4180656911756277810, guid: 843c6a16fbf5be44da6cc1ea85e83f7b, type: 3}
   coinLightSpawn: 0
+  detectSound: {fileID: 5015541416897019892, guid: 317619c9c19c14b41bb5f4d00d7df6a4, type: 3}
+  growlSound: 0
 --- !u!95 &439320670
 Animator:
   serializedVersion: 4
@@ -12595,7 +12600,7 @@ GameObject:
   - component: {fileID: 675009556}
   m_Layer: 0
   m_Name: Coin-Light (8)
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13542,7 +13547,7 @@ GameObject:
   - component: {fileID: 718941337}
   m_Layer: 0
   m_Name: Coin-Light (2)
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13882,7 +13887,9 @@ MonoBehaviour:
   attack: 0
   hpDragon: 100
   die: {fileID: 748450964}
-  destroyTime: 2
+  destroyTime: 5
+  dragonSound: {fileID: 574710883042848866, guid: 64dd0995993013e4da1807d34785cf74, type: 3}
+  growlSound: 0
 --- !u!95 &748450968
 Animator:
   serializedVersion: 4
@@ -16094,7 +16101,7 @@ GameObject:
   - component: {fileID: 829248333}
   m_Layer: 0
   m_Name: Coin-Light (5)
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20419,7 +20426,7 @@ GameObject:
   - component: {fileID: 1199610418}
   m_Layer: 0
   m_Name: Coin-Light (4)
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24288,7 +24295,7 @@ GameObject:
   - component: {fileID: 1406317859}
   m_Layer: 0
   m_Name: Coin-Light (7)
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31807,7 +31814,7 @@ GameObject:
   - component: {fileID: 1911997838}
   m_Layer: 0
   m_Name: Coin-Light (1)
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31976,13 +31983,15 @@ MonoBehaviour:
   range: {fileID: 23835506}
   hpGrunt: 20
   die: {fileID: 1916471595}
-  destroyTime: 4
+  destroyTime: 2
   lookPos: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
   coin: {fileID: 957093855439229371, guid: c0d64b74f06c4ed438f257c2f1788948, type: 3}
   coinDrop: 0
-  coinLight: {fileID: 5566195787321531076, guid: 843c6a16fbf5be44da6cc1ea85e83f7b, type: 3}
+  coinLight: {fileID: 4180656911756277810, guid: 843c6a16fbf5be44da6cc1ea85e83f7b, type: 3}
   coinLightSpawn: 0
+  detectSound: {fileID: 5015541416897019892, guid: 317619c9c19c14b41bb5f4d00d7df6a4, type: 3}
+  growlSound: 0
 --- !u!95 &1916471602
 Animator:
   serializedVersion: 4
@@ -33900,7 +33909,7 @@ GameObject:
   - component: {fileID: 2020238538}
   m_Layer: 0
   m_Name: Coin-Light (6)
-  m_TagString: Coin
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34025,7 +34034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8578869230586474647, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 136.39178
+      value: 135.77
       objectReference: {fileID: 0}
     - target: {fileID: 8578869230586474647, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
       propertyPath: m_LocalPosition.z

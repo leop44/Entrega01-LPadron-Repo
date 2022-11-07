@@ -15,11 +15,14 @@ public class DragonLogic : MonoBehaviour
     public float hpDragon = 100f;
     public GameObject die;
     public float destroyTime = 20;
+    public GameObject dragonSound;
+    public bool growlSound;
 
     private void Start()
     {
         ani = GetComponent<Animator>();
         target = GameObject.Find("Player");
+        growlSound = true;
     }
     private void Conduct()
     {
@@ -51,6 +54,11 @@ public class DragonLogic : MonoBehaviour
         }
         else
         {
+            if (growlSound == true)
+            {
+                Instantiate(dragonSound);
+                growlSound = false;
+            }
             if (Vector3.Distance(transform.position, target.transform.position) > 5 && !attack)
             {
                 var lookPos = target.transform.position - transform.position;
