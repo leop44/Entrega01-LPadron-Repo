@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public bool attacking;
     public float hpHero = 100f;
     public Vector3 startPos;
+    public GameObject coinSound;
 
 
     void Start()
@@ -102,6 +103,11 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("GetHit", true);
             hpHero = hpHero - 10f;
+        }
+        if (other.transform.gameObject.tag == "Coin")
+        {
+            Instantiate(coinSound, transform.position, transform.rotation);
+            Destroy(other.transform.gameObject);
         }
     }
     public void StopAttacking() 

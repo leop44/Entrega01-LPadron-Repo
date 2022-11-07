@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Weapon
   - Sword
+  - Coin
+  - Light
   layers:
   - Default
   - TransparentFX

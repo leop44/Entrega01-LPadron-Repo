@@ -15,14 +15,20 @@ public class GruntLogic : MonoBehaviour
     public Enemy_DetectPlayer range;
     public float hpGrunt = 20f;
     public GameObject die;
-    public float destroyTime = 2;
+    public float destroyTime = 1;
     public Vector3 lookPos;
     public Quaternion rotation;
+    public GameObject coin;
+    public bool coinDrop;
+    public GameObject coinLight;
+    public bool coinLightSpawn;
 
     private void Start()
     {
         ani = GetComponent<Animator>();
         target = GameObject.Find("Player");
+        coinDrop = true;
+        coinLightSpawn = true;
     }
     private void Conduct()
     {
@@ -79,10 +85,14 @@ public class GruntLogic : MonoBehaviour
     {
         Conduct();
 
-        if (hpGrunt <= 0f)
+        if (hpGrunt <= 0f && coinDrop == true)
         {
             ani.SetBool("die", true);
             Destroy(die, destroyTime);
+            Instantiate(coin, transform.position, transform.rotation);
+            coinDrop = false;
+            Instantiate(coinLight, transform.position, transform.rotation);
+            coinLightSpawn = false;
         }
     }
     public void OnTriggerEnter(Collider other)
