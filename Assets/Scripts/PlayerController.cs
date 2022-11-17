@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public GameObject attackSound;
 
 
+
     void Start()
     {
         startPos = transform.position;
@@ -108,6 +109,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.transform.gameObject.tag == "Coin")
         {
+            HUDGame.coinCount++;
             Instantiate(coinSound);
             Destroy(other.transform.gameObject);
         }
