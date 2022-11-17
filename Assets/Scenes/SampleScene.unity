@@ -1204,7 +1204,6 @@ MonoBehaviour:
   rb: {fileID: 52711091}
   anim: {fileID: 52711089}
   attacking: 0
-  hpHero: 100
   startPos: {x: 0, y: 0, z: 0}
   coinSound: {fileID: 3313229845105603560, guid: 500f59f8b5064154191b59bbc5696ac6, type: 3}
   attackSound: {fileID: 1750150624713141583, guid: 126d360845530ab498b157fbcb20d2fe, type: 3}
@@ -18379,6 +18378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinScore: {fileID: 383192695}
+  lifeBar: {fileID: 1218055395}
+  actualLife: 0
+  maxLife: 100
 --- !u!114 &980064986
 MonoBehaviour:
   m_ObjectHideFlags: 0

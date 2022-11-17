@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public Animator anim;
     public bool attacking;
-    public float hpHero = 100f;
+    public static float hpHero = 100f;
     public Vector3 startPos;
     public GameObject coinSound;
     public GameObject attackSound;
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Weapon"))
         {
             anim.SetBool("GetHit", true);
-            hpHero = hpHero - 10f;
+            hpHero = hpHero - 12.5f;
         }
         if (other.transform.gameObject.tag == "Coin")
         {
